@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio - Ingeniero en Informática</title>
+    <!-- FontAwesome y Bootstrap 5 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+
+    <style>
+        /* Pequeño efecto hover para las tarjetas que Bootstrap no trae por defecto */
+        .project-card-hover {
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        .project-card-hover:hover {
+            transform: translateY(-5px);
+            border-color: #D32F2F !important; /* Rojo al pasar el mouse */
+        }
+    </style>
+</head>
+<body class="bg-light text-dark">
+
+<!-- CABECERA (HERO SECTION) -->
+<header class="bg-white text-center py-5 border-bottom border-danger border-5 shadow-sm">
+    <div class="container py-5">
+        <h1 class="display-4 fw-bold text-dark">Hola, soy <span class="text-danger">Kelvin Serrano</span></h1>
+        <h2 class="fs-4 text-secondary fw-light mt-3">Ingeniero en Informática | Desarrollador de Software</h2>
+    </div>
+</header>
+
+<!-- SOBRE MÍ -->
+<section id="sobre-mi" class="container py-5">
+    <h3 class="fw-bold border-start border-danger border-4 ps-3 mb-4 text-dark">Sobre Mí</h3>
+    <p class="lead text-muted" style="line-height: 1.8;">
+        Ingeniero en informática apasionado por el desarrollo de software, Fullstack Web, móviles en Android Studio y con ganas de seguir aprendiendo. En este momento busco ser especialista en IA.
+    </p>
+</section>
+
+<!-- HABILIDADES (Ahora usando Badges de Bootstrap) -->
+<section id="habilidades" class="bg-dark py-5 shadow-sm">
+    <div class="container py-3">
+        <h3 class="fw-bold border-start border-danger border-4 ps-3 mb-4 text-white">Habilidades Técnicas</h3>
+        <div class="d-flex flex-wrap gap-2 mt-4">
+            <span class="badge bg-danger fs-6 px-3 py-2 shadow-sm">Java & Spring Boot</span>
+            <span class="badge bg-danger fs-6 px-3 py-2 shadow-sm">Python & Machine Learning básico</span>
+            <span class="badge bg-danger fs-6 px-3 py-2 shadow-sm">Angular & Frontend CSS</span>
+            <span class="badge bg-danger fs-6 px-3 py-2 shadow-sm">Microservicios</span>
+            <span class="badge bg-danger fs-6 px-3 py-2 shadow-sm">Bases de Datos MySQL, Oracle y MongoDB</span>
+        </div>
+    </div>
+</section>
+
+<!-- PROYECTOS -->
+<section id="proyectos" class="container py-5 mb-4">
+    <h3 class="fw-bold border-start border-danger border-4 ps-3 mb-4 text-dark">Proyectos Destacados</h3>
+
+    <div class="row g-4 mt-2">
+        <!-- Proyecto 1 -->
+        <div class="col-md-6">
+            <div class="card h-100 border-0 border-start border-dark border-5 shadow-sm project-card-hover bg-white">
+                <div class="card-body p-4">
+                    <h4 class="card-title text-danger fw-bold">App de Seguridad Vecinal</h4>
+                    <p class="card-text text-muted mt-3">Aplicación móvil orientada a la seguridad comunitaria, desarrollada con Java en Android Studio y usada para presentar mi tesis junto con 2 compañeros.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Proyecto 2 -->
+        <div class="col-md-6">
+            <div class="card h-100 border-0 border-start border-dark border-5 shadow-sm project-card-hover bg-white">
+                <div class="card-body p-4">
+                    <h4 class="card-title text-danger fw-bold">Educación Continua</h4>
+                    <p class="card-text text-muted mt-3">En este momento estoy terminando un curso de Udemy en desarrollo Fullstack en Java con Spring Boot, Angular, Hibernate y deseo continuar mi carrera como desarrollador en IA como especialista.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Proyecto 3 (Link a la Demo IA) -->
+        <div class="col-12">
+            <div class="card border-0 border-start border-danger border-5 shadow bg-white mt-3">
+                <div class="card-body d-flex flex-column flex-md-row justify-content-between align-items-center p-4">
+                    <div class="text-center text-md-start mb-3 mb-md-0">
+                        <h4 class="card-title text-danger fw-bold mb-2">Área de Experimentación IA</h4>
+                        <p class="card-text text-muted mb-0">Prueba una demostración interactiva de cómo integro modelos de predicción con APIs públicas en aplicaciones web.</p>
+                    </div>
+                    <a href="/demo" class="btn btn-danger btn-lg shadow-sm text-nowrap px-4 py-2">
+                        <i class="fas fa-brain me-2"></i> Ver Demo Interactiva
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-black text-center py-5">
+    <div class="container text-white py-3">
+        <h4 class="mb-4 fw-light">¿Trabajamos juntos?</h4>
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+            <!-- Botón de Correo -->
+            <a href="mailto:kelvinserrano1261@gmail.com" class="btn btn-danger btn-lg shadow px-4">
+                <i class="fas fa-envelope me-2"></i> Contáctame
+            </a>
+
+            <!-- Botón de LinkedIn -->
+            <a href="https://www.linkedin.com/in/kelvin-serrano-568427236" target="_blank" rel="noopener noreferrer" class="btn btn-lg shadow text-white px-4" style="background-color: #0077b5;">
+                <i class="fab fa-linkedin me-2"></i> LinkedIn
+            </a>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

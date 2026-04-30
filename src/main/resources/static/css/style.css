@@ -1,0 +1,223 @@
+/* Paleta de Colores: Blanco, Negro (#111), Rojo (#D32F2F) */
+:root {
+    --blanco: #ffffff;
+    --negro: #111111;
+    --rojo: #D32F2F;
+    --gris-claro: #f4f4f4;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--blanco);
+    color: var(--negro);
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 40px 0;
+}
+
+header {
+    background-color: var(--blanco);
+    text-align: center;
+    border-bottom: 5px solid var(--rojo);
+    padding: 60px 0;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+header span {
+    color: var(--rojo);
+}
+
+header h2 {
+    font-weight: 300;
+    color: #555;
+}
+
+h3 {
+    font-size: 2rem;
+    border-left: 5px solid var(--rojo);
+    padding-left: 15px;
+    margin-bottom: 20px;
+}
+
+/* Sección Habilidades (Fondo Negro) */
+.bg-black {
+    background-color: var(--negro);
+    padding: 60px 0;
+    width: 100%;
+}
+
+.text-white {
+    color: var(--blanco);
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+}
+
+.skills-list li {
+    background-color: var(--rojo);
+    color: var(--blanco);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Tarjetas de Proyectos */
+.proyecto-card {
+    background-color: var(--gris-claro);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 5px solid var(--negro);
+    transition: transform 0.3s ease;
+}
+
+.proyecto-card:hover {
+    transform: translateX(10px);
+    border-left: 5px solid var(--rojo);
+}
+
+.text-red {
+    color: var(--rojo);
+    margin-top: 0;
+}
+
+/* Footer y Botones */
+footer {
+    background-color: var(--negro);
+    text-align: center;
+    padding: 40px 0;
+}
+
+.btn-rojo {
+    display: inline-block;
+    background-color: var(--rojo);
+    color: var(--blanco);
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: background 0.3s;
+}
+
+.btn-rojo:hover {
+    background-color: #b71c1c;
+}
+
+
+.centrar {
+    text-align:center;
+    align:center;
+
+}
+
+/* Estilos para la sección de contacto en el Footer */
+.redes-contacto {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.btn-linkedin {
+    display: inline-block;
+    background-color: #0077b5; /* Azul oficial de LinkedIn */
+    color: var(--blanco);
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: background 0.3s;
+}
+
+.btn-linkedin:hover {
+    background-color: #005582;
+}
+
+/* Espaciado para que el ícono no quede pegado al texto */
+.redes-contacto i {
+    margin-right: 8px;
+    font-size: 1.2rem;
+}
+
+
+/* Estilos para la demostración de Colab */
+.colab-preview {
+    background-color: #f9f9f9;
+    border-left: 4px solid var(--rojo);
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 4px;
+}
+
+.colab-preview h4 {
+    margin-top: 0;
+    color: var(--negro);
+}
+
+.colab-preview ul {
+    margin-bottom: 0;
+    padding-left: 20px;
+}
+
+.colab-action {
+    text-align: center;
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px solid #ccc;
+}
+
+.colab-action img {
+    transition: transform 0.3s ease;
+}
+
+.colab-action img:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos del Dashboard */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.metric-card {
+    background-color: #1a1a1a;
+    border-top: 4px solid var(--rojo);
+    padding: 20px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.metric-card .label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: #888;
+}
+
+.metric-card h3 {
+    font-size: 1.8rem;
+    margin: 10px 0 0 0;
+    color: var(--blanco);
+}
+
+.margen-izquierda {
+    margin-left: 20px;
+}
